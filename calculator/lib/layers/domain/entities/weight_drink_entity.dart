@@ -4,7 +4,6 @@ class WeightDrinkEntity {
   double numberOfDoses;
   double grossWeight;
   double tare;
-
   double openBottleWeight;
   WeightDrinkEntity({
     required this.id,
