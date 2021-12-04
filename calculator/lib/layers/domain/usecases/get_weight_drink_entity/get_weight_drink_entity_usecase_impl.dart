@@ -8,7 +8,7 @@ class GetWeightDrinkEntityUsecaseImpl implements GetWeightDrinkEntityUsecase {
 
   GetWeightDrinkEntityUsecaseImpl(this._getWeightDrinkEntityRepository);
   @override
-  Future<Either<Exception, WeightDrinkEntity>> call() {
-    return _getWeightDrinkEntityRepository();
+  Future<Either<Exception, WeightDrinkEntity>> call(int id) {
+    return _getWeightDrinkEntityRepository(id);
   }
 }

@@ -25,8 +25,8 @@ void main() {
         openBottleWeight: 660);
   test('should return weight drink entity', () {
    
-    when(() => repository()).thenAnswer((_) async => Right(tWeightDrink));
-    var result = usecase();
+    when(() => repository(any())).thenAnswer((_) async => Right(tWeightDrink));
+    var result = usecase(1);
     expect(result, isNotNull);
   });
 }
