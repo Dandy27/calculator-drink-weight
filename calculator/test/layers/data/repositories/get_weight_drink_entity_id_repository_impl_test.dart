@@ -13,4 +13,11 @@ void main() {
 
     expect(result.id, 1);
   });
+  test('should return isNotNull', () {
+    GetWeightDrinkEntityIdUsecase usecase = GetWeightDrinkEntityIdUsecaseImpl(
+        GetWeightDrinkEntityIdRepositoryImpl(
+            GetWeightDrinkEntityIdLocalDatasourceImpl()));
+    var result = usecase(1);
+expect(result, isNotNull);
+  });
 }

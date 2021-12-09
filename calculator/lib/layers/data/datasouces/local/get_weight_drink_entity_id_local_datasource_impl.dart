@@ -1,5 +1,6 @@
 import 'package:calculator/layers/data/datasouces/get_weight_drink_entity_id_datasource.dart';
 import 'package:calculator/layers/data/dto/weight_drink_dto.dart';
+import 'package:fpdart/fpdart.dart';
 
 class GetWeightDrinkEntityIdLocalDatasourceImpl
     implements GetWeightDrinkEntityIdDatasource {
@@ -22,7 +23,7 @@ class GetWeightDrinkEntityIdLocalDatasourceImpl
   };
 
   @override
-  WeightDrinkDto call(int id) {
+  Future<Either<Exception, WeightDrinkDto>> call(int id) {
     if (id == 1) {
       return WeightDrinkDto.fromMap(jsonId1);
     }
